@@ -18,9 +18,32 @@ class ActionController extends Controller
         $project->visual = $request->visual;
         $project->source = $request->source ;
         $project->author = $request->author;
+        $project->save();
+        $project->tags()->attach($request->tags);
+        return redirect('/home');
+    }
+
+    public function deleteProject(Request $request)
+    {
+        $project = Project::find($request->id);
+        $project->tags()->detach();
+        $project->delete();
+
+        //tag::destroy($request->id);
+        return redirect('/home');
+    }
+
+    public function updateProject(Request $request)
+    {
+        $project= Project::findOrFail($request->id);;
+        $project->name = $request->name;
+        $project->description = $request->description;
+        $project->visual = $request->visual;
+        $project->source = $request->source ;
+        $project->author = $request->author;
         $project->tags()->attach($request->tags);
         $project->save();
-        return redirect('/project/{id}');
+        return redirect('/home');
     }
 /*
     public function addTag(Request $request)

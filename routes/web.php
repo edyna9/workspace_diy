@@ -37,3 +37,9 @@ Route::get('/project/{id}', [NavController::class, 'showProject']);
 Route::get('/add_project', [NavController::class, 'showAddProject']);
 
 Route::post('/addProject', [ActionController::class, 'addProject']);
+
+Route::post('/deleteProject', [ActionController::class, 'deleteProject']);
+
+Route::get('/updateProject/{id}', [NavController::class, 'showUpdateProject']);
+
+Route::post('/updateProject', [ActionController::class, 'updateProject']);

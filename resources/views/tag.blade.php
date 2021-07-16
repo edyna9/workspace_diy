@@ -26,6 +26,13 @@
                     <h2>{{$project->name}}</h2>
                             <a href="/project/{{ $project->id }}"><img class="visual" src="{{$project->visual}}" alt="{{$project->name}}"></a>
                         <h3>Author : {{$project->author}}</h3>
+                        <div>
+                            <form action="/deleteProject" method="POST">
+                                @csrf
+                                <input type="hidden" name="id" value="{{$project->id}}">
+                                <input type="submit" value="X">
+                            </form>
+                        </div>
                 </div>
                 @endforeach  
             </div> 

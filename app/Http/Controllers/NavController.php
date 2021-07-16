@@ -36,6 +36,14 @@ class NavController extends Controller
 
         return view('addProject', ['tags' => $tags, 'categories' => $categories]);
     }
+
+    public function showUpdateProject($id)
+    {
+        $project = Project::findOrFail($id);
+        $categories = Category::all()->sortBy('name');
+        $tags = Tag::all();
+        return view('updateProject', ['project' => $project, 'categories' => $categories, 'tags' => $tags]);
+    }
 }
 
 
