@@ -1,0 +1,158 @@
+h1,h2, h3, h4, h5, h6, p,li, td, th{
+    font-family: 'Montserrat', sans-serif;
+    color: rgb(84, 87, 87);
+}
+
+li{
+    font-family: 'Shadows Into Light Two', cursive;
+    color: rgb(84, 87, 87);
+}
+
+.specialText{
+    font-family: 'Shadows Into Light Two', cursive;
+}
+
+
+
+nav li a{
+    display: inline;
+    text-decoration: none;
+    color: rgb(84, 87, 87);
+}
+li{
+    text-decoration: none;
+}
+body{
+background-color: rgb(247, 247, 247);
+display: flex;
+flex-direction: column;
+justify-content: center;
+margin: 0;
+
+}  
+#menu ul {
+margin:0;
+padding:0;
+list-style-type:none;
+text-align:center;
+}
+#menu li {
+float:left;
+margin:auto;
+padding:0;
+
+}
+#menu li a {
+display:block;
+width:100px;
+color:rgb(66, 66, 66);
+text-decoration:none;
+padding:5px;
+
+}
+#menu li a:hover {
+color:#2790b9;
+}
+
+body div{
+display: flex;
+flex-direction: column;
+justify-content: center; 
+}
+
+#boxHeader{
+    display: flex;
+    flex-direction: row;
+    align-items:flex-start;
+    justify-content: space-between;
+}
+#containMenu{
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+}
+#myTitle{
+    font-weight: bold;
+    font-size: 300%;
+    font-family: 'Shadows Into Light Two', cursive;
+    margin:0;
+}
+#logo{
+padding: 1%;
+margin:0;
+}
+table {
+border-collapse: collapse;
+text-align: center;
+}
+td{
+    padding: 2%;
+}
+.contain{
+    margin-left: 5%;
+    margin-right: 5%;
+    text-align: center; 
+}
+.boxVisual{
+    display: flex;
+    flex-direction: row;
+    align-items:flex-start;
+    flex-wrap: wrap;
+  }
+.boxProject{
+    border-radius: 25px;
+    background-color: rgb(231, 229, 227);
+    padding: 10px;
+    width: 320px;
+    margin: 10px;
+  }
+.visual{
+  border-radius: 25px;
+  width: 300px;
+  margin: 10px;
+}
+.boxText{
+    border-radius: 25px;
+    width: 260px;
+    margin: 10px;
+    background-color: #ffffff;
+    padding: 20px;
+  }
+#containFooter{
+    background-color: rgb(196, 190, 190);
+    padding: 2%;
+  }
+  .boxWelcome{
+    display: flex;
+    flex-direction: row;
+    align-items:flex-start;
+    flex-wrap: wrap;
+  }
+  .welcomeText{
+    border-radius: 25px;
+    margin: 10px;
+    background-color: #ffffff;
+  }
+  #boxRed{
+    background-color: #f7c4c4;
+  }
+  #boxPink{
+    background-color: #fcd5f3;
+  }
+  #boxViolet{
+    background-color: #dfd2f8;
+  }
+  #boxBlue{
+    background-color: #c3dff7;
+  }
+  #boxTurquoise{
+    background-color: #d2f7fa;
+  }
+ 
+  .sectionText{
+    border-radius: 25px;
+    margin: 10px;
+    padding: 1%;
+    font-family: 'Shadows Into Light Two', cursive;
+    background-color: #ffffff;
+  }
