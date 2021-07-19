@@ -12,7 +12,7 @@ class NavController extends Controller
 {
     public function showHome()
     {
-        $categories = Category::with('tags')->get()->sortBy('name');
+        $categories = Category::with('tags')->get()->sortBy('id');
         return view('home', ['categories' => $categories]);
     }
 
@@ -20,9 +20,16 @@ class NavController extends Controller
     {
         $categories = Category::all()->sortBy('name');
         $projects = Project::all();
-        
         return view('tag', ['tag' => Tag::findOrFail($id),'projects' => $projects, 'categories' => $categories ]);
+        
     }
+
+    public function showList()
+    {
+        $projects = Project::all();
+        return view('listProjects', ['projects'=> $projects]);
+    }
+
 
     public function showProject($id)
     {
@@ -43,6 +50,23 @@ class NavController extends Controller
         $categories = Category::all()->sortBy('name');
         $tags = Tag::all();
         return view('updateProject', ['project' => $project, 'categories' => $categories, 'tags' => $tags]);
+    }
+
+    //a modifier pour les tags
+    public function showAddTag()
+    {   
+        $categories = Category::all()->sortBy('name');
+        $tags = Tag::all();
+
+        return view('addTag', ['tags' => $tags, 'categories' => $categories]);
+    }
+
+    public function showUpdateTag($id)
+    {
+        $tag = Tag::findOrFail($id);
+        $categories = Category::all()->sortBy('name');
+    
+        return view('updateTag', ['categories' => $categories, 'tag' => $tag]);
     }
 }
 

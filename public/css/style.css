@@ -1,3 +1,7 @@
+body{
+  margin: 0;
+  padding: 0;
+}
 h1,h2, h3, h4, h5, h6, p,li, td, th{
     font-family: 'Montserrat', sans-serif;
     color: rgb(84, 87, 87);
@@ -94,6 +98,7 @@ td{
     text-align: center; 
 }
 .boxVisual{
+ 
     display: flex;
     flex-direction: row;
     align-items:flex-start;
@@ -147,6 +152,9 @@ td{
   }
   #boxTurquoise{
     background-color: #d2f7fa;
+  }
+  #boxGreen{
+    background-color: #d2fae6;
   }
  
   .sectionText{

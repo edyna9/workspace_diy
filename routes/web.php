@@ -43,3 +43,15 @@ Route::post('/deleteProject', [ActionController::class, 'deleteProject']);
 Route::get('/updateProject/{id}', [NavController::class, 'showUpdateProject']);
 
 Route::post('/updateProject', [ActionController::class, 'updateProject']);
+
+Route::get('/listProjects', [NavController::class, 'showList']);
+
+Route::post('/deleteTag', [ActionController::class, 'deleteTag']);
+
+Route::get('/add_tag', [NavController::class, 'showAddTag']);
+
+Route::post('/addTag', [ActionController::class, 'addTag']);
+
+Route::get('/updateTag/{id}', [NavController::class, 'showUpdateTag']);
+
+Route::post('/updateTag', [ActionController::class, 'updateTag']);
