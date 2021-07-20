@@ -3,84 +3,59 @@
 @section('title', 'Update a Project DIY')
 
 @section('content')
-<div class="contain">
-    <h1>Change this Project DIY</h1>
-       
-    
-    
-    <div>
-            <form action="/updateProject" method="POST">
-                @csrf
-                <input type="hidden" name="id" value="{{$project->id}}">
-                <div>
-                    <label for="name">Name</label>
+    <div class="container">
+        <h1>Change this Project DIY</h1>
+            <div>
+                <form action="/updateProject" method="POST">
+                    @csrf
+                        <input type="hidden" name="id" value="{{$project->id}}">
                     <div>
-                        <input type="text" name="name" placeholder="Name" value="{{$project->name}}">
+                        <label for="name">Name</label>
+                            <div>
+                                <input type="text" name="name" placeholder="Name" value="{{$project->name}}">
+                            </div>
                     </div>
-                </div>
-                <div>
-                    <label for="author">Author</label>
                     <div>
-                        <input type="text" name="author" placeholder="Author" value="{{$project->author}}">
-                    </div>
-
-                </div>
-
-                <div>
-                    <label for="visual">Visual</label>
-                    <p>Add the image adress Exemple of type: https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_92x30dp.png</p>
+                        <label for="tag">Tag</label>
+                            <select multiple name="tag">
+                                @foreach ($tags as $tag)
+                                    <option value="{{$tag->name}}">{{$tag->name}}</option>
+                                @endforeach
+                            </select>
+                        <p>To make a multiple selection, hold down the CTRL key</p>
+                    </div> 
                     <div>
-                        <input type="text" name="visual" placeholder="Visual" value="{{$project->visual}}">
+                        <label for="author">Author</label>
+                            <div>
+                                <input type="text" name="author" placeholder="Author" value="{{$project->author}}">
+                            </div>
                     </div>
-                </div>
-
-                <div>
-                    <label for="source">Source</label>
                     <div>
-                        <input type="text" name="source" placeholder="Source" value="{{$project->source}}">
+                        <label for="visual">Visual</label>
+                            <p>Add the image adress Exemple of type: https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_92x30dp.png</p>
+                        <div>
+                            <input type="text" name="visual" placeholder="Visual" value="{{$project->visual}}">
+                        </div>
                     </div>
-                </div>
-
-
-
-
-                {{-- <input type="text"name="genre" placeholder="Genre" value="{{$book->genre}}"> --}}
-                
-                <div>
-                    <label for="tag">Tag</label>
                     <div>
-                        
-                        @foreach ($tags as $tag)
-                        <input type="checkbox" name="tags[]" value="{{$tag->id}}">
-                        <label for="tag">{{$tag->name}}</label>
-                        @endforeach
+                        <label for="source">Source</label>
+                            <div>
+                                <input type="text" name="source" placeholder="Source" value="{{$project->source}}">
+                            </div>
                     </div>
-                </div>
-              
-
-
-
-
-
-
-
-
-
-
-
-                <div>
-                    <label for="description">Description</label>
                     <div>
-                        <input type="text"name="description" placeholder="Description" value="{{$project->description}}">
+                        <label for="description">Description</label>
+                            <div>
+                                <input type="text"name="description" placeholder="Description" value="{{$project->description}}">
+                            </div>
                     </div>
-                </div>
-                <br>
-                <div>
-                    <button type="submit">Chage this Project !</button>
-                </div>
-            </form>
-        </div>
-</div>
+                    <br>
+                    <div>
+                        <button type="submit">Chage this Project !</button>
+                    </div>
+                </form>
+            </div>
+    </div>
 @endsection
 
 

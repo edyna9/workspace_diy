@@ -19,8 +19,12 @@ class NavController extends Controller
     public function showTag($id)
     {
         $categories = Category::all()->sortBy('name');
-        $projects = Project::all();
+        $projects = Project::with('tags')->get()->sortBy('id');
         return view('tag', ['tag' => Tag::findOrFail($id),'projects' => $projects, 'categories' => $categories ]);
+    
+        /* $categories = Category::all()->sortBy('name');
+        $projects = Project::all();
+        return view('tag', ['tag' => Tag::findOrFail($id),'projects' => $projects, 'categories' => $categories ]); */
         
     }
 
@@ -38,9 +42,9 @@ class NavController extends Controller
 
     public function showAddProject()
     {   
-        $categories = Category::all()->sortBy('name');
-        $tags = Tag::all();
-
+        $categories = Category::with('tags')->get()->sortBy('name');
+        $tags = Tag::all()->sortBy('name');
+    
         return view('addProject', ['tags' => $tags, 'categories' => $categories]);
     }
 
