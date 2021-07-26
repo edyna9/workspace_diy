@@ -13,7 +13,6 @@ class CreateProjectTagTable extends Migration
      */
     public function up()
     {
-        Schema::dropIfExists('project_tag');
         Schema::create('project_tag', function (Blueprint $table) {
             $table->id();
             $table->foreignId('project_id')->constrained('projects')->onUpdate('cascade')->onDelete('cascade');

@@ -1,53 +1,249 @@
-/* STRUCTURE*/
+
+/* TEXT & LIST & NAV & LINKS*/
+#Title{
+  font-weight: bold;
+  font-size: 300%;
+  font-family: 'Shadows Into Light Two', cursive;
+  margin:0;
+  text-decoration: none;
+  color: black;
+  text-shadow: rgba(59, 59, 59, 0.192) 1px 0 10px;
+}
+h1,h2, h3, h4, h5, h6, p,li, td, th{
+  font-family: 'Montserrat', sans-serif;
+  color: rgb(84, 87, 87);
+  text-decoration: none;
+}
+.specialText{
+  font-family: 'Shadows Into Light Two', cursive;
+}
+.specialWelcomelText{
+  font-family: 'Shadows Into Light Two', cursive;
+  color: rgb(255, 255, 255);
+  text-shadow: rgba(0, 0, 0, 0.938) 1px 0 10px;
+  font-size: 4rem;
+  margin:0%;
+  margin-top: 1%;;
+  text-align: center;
+
+}
+nav li a{
+  font-family: 'Shadows Into Light Two', cursive;
+  display: inline;
+  text-decoration: none;
+  color: rgb(84, 87, 87);
+}
+#menu ul {
+margin:0;
+padding:0;
+list-style-type:none;
+text-align:center;
+}
+#menu li {
+float:left;
+margin:auto;
+padding:0;
+}
+#menu li a {
+display:block;
+width:100px;
+color:rgb(66, 66, 66);
+text-decoration:none;
+padding:5px;
+}
+#menu li a:hover {
+color:#ffffff;
+text-shadow: 1px 1px 2px rgba(97, 97, 97, 0.438);
+}
+a{
+text-decoration: none;
+}
+i{
+  font-size: 5rem;
+}
+i, #Title{
+  text-decoration: none;
+  color:rgb(66, 66, 66);
+  }
+i:hover, #Title:hover{
+  text-decoration: none;
+  color:#ffffff;
+  text-shadow: 1px 1px 2px rgba(97, 97, 97, 0.438);
+  }
+#textLight{
+  text-shadow: 2px 2px 2px rgba(255, 248, 248, 0.753);
+}
+/*Structure*/
 body{
   background-color: rgb(247, 247, 247);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   margin: 0;
   padding: 0;
   }  
-body div{
-  display: flex;
-  flex-direction: column;
-  justify-content: center; 
+  /*HEADER*/
+  #boxHeader{
+    background-color: white;
+    border-radius: 0 0 50px 50px;
+    filter: drop-shadow(0 0 0.75rem rgba(83, 83, 83, 0.26));
+    margin-left: 3%;
+    margin-right: 3%;
+    margin-bottom: 1%;
+    padding-bottom: 0.3%;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+    #logo{
+      padding: 0.1%;
+      margin:0;
+      }
+    #boxMenu{
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+    }
+      .boxText{
+        border-radius: 25px;
+        width: 260px;
+        margin: 10px;
+        background-color: #ffffff;
+        padding: 20px;
+        text-align: center;
+      }
+      #boxRed{
+        background-color: #f7c4c4;
+      }
+      #boxPink{
+        background-color: #fcd5f3;
+      }
+      #boxViolet{
+        background-color: #dfd2f8;
+      }
+      #boxBlue{
+        background-color: #c3dff7;
+      }
+      #boxTurquoise{
+        background-color: #d2f7fa;
+      }
+      #boxGreen{
+        background-color: #d2fae6;
+      }
+      #boxLightGreen{
+        background-color: #d3fad2;
+      }
+
+  /*BODY*/
+
+  .container{
+    margin-left: 3%;
+    margin-right: 3%;
+    margin-bottom: 1%;
+    padding-bottom: 0.3%;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    
+  }
+  .moodboard{
+    background-image: url("/images/inspiration_board.jpeg");
+    width: 100%;
+    filter: drop-shadow(0 0 0.75rem rgba(83, 83, 83, 0.26));
+    margin-top:1%;
+    margin-bottom: 3%;
+    border-radius: 50px;
+    filter: drop-shadow(0 0 0.75rem rgba(83, 83, 83, 0.26));
+   
+    padding-bottom: 0.3%;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+  }
+  .boxWelcome{
+    display: flex;
+    flex-direction: row;
+    align-items:flex-start;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .visualBig{
+    border-radius: 50px;
+    width: 300px;
+    margin: 10px;
+  }
+
+  .visual{
+    border-radius: 25px;
+    width: 300px;
+    margin: 10px;
   }
   
-  #boxHeader{
-      display: flex;
+  .boxVisual{
+    display: flex;
       flex-direction: row;
       align-items:flex-start;
-      justify-content: space-between;
-  }
-  #containerMenu{
+      flex-wrap: wrap;
+    }
+    .moodboardUse{
+      background-image: url("/images/do-it-yourself.jpeg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      width: 100%;
+      filter: drop-shadow(0 0 0.75rem rgba(83, 83, 83, 0.26));
+      margin-top:1%;
+      margin-bottom: 3%;
+      border-radius: 50px;
+      filter: drop-shadow(0 0 0.75rem rgba(83, 83, 83, 0.26));
+      padding-bottom: 0.3%;
+      width: auto;
       display: flex;
-      flex-direction: row;
-      justify-content: right;
-  }
-  #myTitle{
-      font-weight: bold;
-      font-size: 300%;
+      flex-direction: column;
+      align-items: center; 
+    }
+    .boxShortText{
+      border-radius: 15px;
+     padding-inline-end: 10px;
+     padding-inline-start: 10px;
+      margin: 10px;
+      background-color: #ffffffb7;
+      
+      text-align: center;
+    }
+
+    .moodboardCategory{
+      background: rgb(231,231,231);
+      background: radial-gradient(circle, rgba(231,231,231,1) 0%, rgba(195,195,195,1) 100%);
+      width: 100%;
+      filter: drop-shadow(0 0 0.75rem rgba(83, 83, 83, 0.26));
+      margin-top:1%;
+      margin-bottom: 3%;
+      border-radius: 50px;
+      filter: drop-shadow(0 0 0.75rem rgba(83, 83, 83, 0.26));
+      padding-bottom: 0.3%;
+      display: flex;
+      flex-direction: column;
+      align-items: center; 
+    }
+
+    .sectionText{
+      border-radius: 25px;
+      margin: 10px;
+      padding: 1%;
       font-family: 'Shadows Into Light Two', cursive;
-      margin:0;
-  }
-  #logo{
-  padding: 1%;
-  margin:0;
-  }
-  table {
-  border-collapse: collapse;
-  text-align: center;
-  }
-  td{
-      padding: 2%;
-  }
-  .container{
-      margin-left: 5%;
-      margin-right: 5%;
-      text-align: center; 
-  }
+      background-color: #ffffff;
+    }
+  
+  
+
+
+  
+/*A VERIFIER*/
+
+/*
+  
+  
   .boxVisual{
-   
       display: flex;
       flex-direction: row;
       align-items:flex-start;
@@ -60,22 +256,6 @@ body div{
       width: 320px;
       margin: 10px;
     }
-  .visual{
-    border-radius: 25px;
-    width: 300px;
-    margin: 10px;
-  }
-  .boxText{
-      border-radius: 25px;
-      width: 260px;
-      margin: 10px;
-      background-color: #ffffff;
-      padding: 20px;
-    }
-    #containerFooter{
-      background-color: rgb(196, 190, 190);
-      padding: 2%;
-    }
     .boxWelcome{
       display: flex;
       flex-direction: row;
@@ -87,29 +267,7 @@ body div{
       margin: 10px;
       background-color: #ffffff;
     }
-    #boxRed{
-      background-color: #f7c4c4;
-    }
-    #boxPink{
-      background-color: #fcd5f3;
-    }
-    #boxViolet{
-      background-color: #dfd2f8;
-    }
-    #boxBlue{
-      background-color: #c3dff7;
-    }
-    #boxTurquoise{
-      background-color: #d2f7fa;
-    }
-    #boxGreen{
-      background-color: #d2fae6;
-    }
-  
-  
-    #boxLightGreen{
-      background-color: #d3fad2;
-    }
+    
     .sectionText{
       border-radius: 25px;
       margin: 10px;
@@ -117,48 +275,23 @@ body div{
       font-family: 'Shadows Into Light Two', cursive;
       background-color: #ffffff;
     }
+*/
 
-/* TEXT & LINKS*/
-h1,h2, h3, h4, h5, h6, p,li, td, th{
-    font-family: 'Montserrat', sans-serif;
-    color: rgb(84, 87, 87);
-}
-li{
-    font-family: 'Shadows Into Light Two', cursive;
-    color: rgb(84, 87, 87);
-}
+  /*FOOTER*/
+    #containerFooter{
+      background-color: rgb(196, 190, 190);
+      padding: 2%;
+      border-radius: 50px 50px 0 0 ;
+      filter: drop-shadow(0 0 0.75rem rgba(83, 83, 83, 0.26));
+      margin-left: 3%;
+      margin-right: 3%;
+      margin-top: 1%;
+      padding-bottom: 0.3%;
+      padding-top: 0.3%;
+      width: auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
 
-.specialText{
-    font-family: 'Shadows Into Light Two', cursive;
-}
-nav li a{
-    display: inline;
-    text-decoration: none;
-    color: rgb(84, 87, 87);
-}
-li{
-    text-decoration: none;
-}
-#menu ul {
-margin:0;
-padding:0;
-list-style-type:none;
-text-align:center;
-}
-#menu li {
-float:left;
-margin:auto;
-padding:0;
 
-}
-#menu li a {
-display:block;
-width:100px;
-color:rgb(66, 66, 66);
-text-decoration:none;
-padding:5px;
-
-}
-#menu li a:hover {
-color:#2790b9;
-}

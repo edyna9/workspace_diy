@@ -1,8 +1,8 @@
 <div id="boxHeader">
     <div id="logo">
-        <a href="/home"><h1 id='myTitle'>WorkSpace</h1></a>
+        <a href="/home"><h1 id='Title'>WorkSpace</h1></a>
     </div>
-    <div id="containerMenu">
+    <div id="boxMenu">
         <nav id="menu">
             <ul>
                 <li><a class="boxText" id="boxRed" href="/home/#sectionStyle">STYLE</a></li>

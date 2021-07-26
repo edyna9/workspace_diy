@@ -12,7 +12,7 @@ class ActionController extends Controller
 {
     public function addProject(Request $request)
     {
-        $project= new Project();
+        $project= new Project;
         $project->name = $request->name;
         $project->description = $request->description;
         $project->visual = $request->visual;
@@ -20,6 +20,19 @@ class ActionController extends Controller
         $project->author = $request->author;
         $project->save();
         $project->tags()->attach($request->tags);
+        return redirect('/home');
+    }
+
+    public function updateProject(Request $request)
+    {
+        $project= Project::findOrFail($request->id);
+        $project->name = $request->name;
+        $project->description = $request->description;
+        $project->visual = $request->visual;
+        $project->source = $request->source ;
+        $project->author = $request->author;
+        $project->tags()->sync($request->tags);
+        $project->save();
         return redirect('/home');
     }
 
@@ -33,29 +46,15 @@ class ActionController extends Controller
         return redirect('/home');
     }
 
-    public function updateProject(Request $request)
-    {
-        $project= Project::findOrFail($request->id);
-        $project->name = $request->name;
-        $project->description = $request->description;
-        $project->visual = $request->visual;
-        $project->source = $request->source ;
-        $project->author = $request->author;
-        $project->tags()->attach($request->tags);
-        $project->save();
-        return redirect('/home');
-    }
-
-
     public function addTag(Request $request)
     {
-        $tag= new Tag();
+        $tag= new Tag;
         $tag->name = $request->name;
         $tag->description = $request->description;
         $tag->visual = $request->visual;
         $tag->category_id = $request->category_id;
-        $tag->save();
         $tag->projects()->attach($request->projects);
+        $tag->save();
         return redirect('/home');
     }
 
@@ -71,13 +70,12 @@ class ActionController extends Controller
 
     public function updateTag(Request $request)
     {
-
         $tag= Tag::findOrFail($request->id);
         $tag->name = $request->name;
         $tag->description = $request->description;
         $tag->visual = $request->visual;
         $tag->category_id = $request->category_id;
-        $tag->projects()->attach($request->projects);
+        $tag->projects()->sync($request->projects);
         $tag->save();
         return redirect('/home');
     }

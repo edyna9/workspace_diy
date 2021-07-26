@@ -7,6 +7,7 @@
         <h1>Create a new Project DIY</h1>
             <h2>Share your inspiration</h2>
                 <div>
+                    
                     <form action="/addProject" method="POST">
                         @csrf
                             <div>
@@ -18,9 +19,9 @@
                         <br>
                             <div>
                                 <label for="tag">Tag</label>
-                                    <select multiple name="tag">
+                                    <select multiple name="tags[]">
                                         @foreach ($tags as $tag)
-                                            <option value="{{$tag->name}}">{{$tag->name}}</option>
+                                            <option value="{{$tag->id}}">{{$tag->name}}</option>
                                         @endforeach
                                     </select>
                                 <p>To make a multiple selection, hold down the CTRL key</p>
