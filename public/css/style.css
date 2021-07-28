@@ -57,15 +57,46 @@ text-shadow: 1px 1px 2px rgba(97, 97, 97, 0.438);
 }
 a{
 text-decoration: none;
+font-family: 'Style Script', cursive;
+color: rgb(166, 204, 214);
+
+}
+a:hover{
+  text-decoration: none;
+  text-shadow: 1px 1px 1px rgba(97, 97, 97, 0.438);
+  }
+.authorLink{
+  font-size: 2rem;
+}
+#iconContact{
+  font-size: 5rem;
+  text-decoration: none;
+  color:rgb(66, 66, 66);
+}
+#iconContact:hover{
+  text-decoration: none;
+  color:#ffffff;
+  text-shadow: 1px 1px 2px rgba(97, 97, 97, 0.438);
 }
 i{
-  font-size: 5rem;
+  font-size: 2rem;
+  text-decoration: none;
+  color:rgb(66, 66, 66);
 }
-i, #Title{
+i:hover, button:hover{
+  text-decoration: none;
+  color:#ffffff;
+  text-shadow: 1px 1px 2px rgba(97, 97, 97, 0.438);
+}
+button{
+  background-color: rgba(255, 255, 255, 0);
+  border: none;
+}
+#Title{
   text-decoration: none;
   color:rgb(66, 66, 66);
   }
-i:hover, #Title:hover{
+#Title:hover{
   text-decoration: none;
   color:#ffffff;
   text-shadow: 1px 1px 2px rgba(97, 97, 97, 0.438);
@@ -176,15 +207,57 @@ body{
   .visual{
     border-radius: 25px;
     width: 300px;
+    max-height: 450px;
     margin: 10px;
+    margin-top: 0%;
+    margin-left: 0%;
+    filter: drop-shadow(0 0 0.75rem rgba(83, 83, 83, 0.26));
+  }
+  .visualProject{
+    border-radius: 25px;
+    width: 300px;
+    max-height: 450px;
+    filter: drop-shadow(0 0 0.75rem rgba(83, 83, 83, 0.26));
+    object-fit: cover;
+    object-position: center top;
   }
   
   .boxVisual{
     display: flex;
-      flex-direction: row;
-      align-items:flex-start;
-      flex-wrap: wrap;
+    flex-direction: row;
+    align-items:flex-start;
+    flex-wrap: wrap;
+    justify-content: space-around;
     }
+    .container-card{
+      border-radius: 25px;
+      width: 300px;
+      background: rgb(196,190,190);
+      background: linear-gradient(0deg, rgba(196,190,190,1) 0%, rgb(255, 255, 255) 70%);
+      text-align: center;    
+      display: flex;
+      flex-direction: column;
+      justify-content:center;
+      margin-bottom: 20px;
+    }
+    .moodboardCategory > div > h1{
+      font-size: 3rem;
+      margin-top: 0.5rem;
+      margin-bottom: 0.5rem;
+    }
+    /* .container-card:nth-child(odd){
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-items:flex-start;
+    }
+
+    .container-card:nth-child(even){
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-items:flex-end;
+    } */
     .moodboardUse{
       background-image: url("/images/do-it-yourself.jpeg");
       background-repeat: no-repeat;
@@ -207,15 +280,10 @@ body{
      padding-inline-start: 10px;
       margin: 10px;
       background-color: #ffffffb7;
-      
       text-align: center;
     }
-
     .moodboardCategory{
-      background: rgb(231,231,231);
-      background: radial-gradient(circle, rgba(231,231,231,1) 0%, rgba(195,195,195,1) 100%);
       width: 100%;
-      filter: drop-shadow(0 0 0.75rem rgba(83, 83, 83, 0.26));
       margin-top:1%;
       margin-bottom: 3%;
       border-radius: 50px;
@@ -223,9 +291,8 @@ body{
       padding-bottom: 0.3%;
       display: flex;
       flex-direction: column;
-      align-items: center; 
+      align-items: center;
     }
-
     .sectionText{
       border-radius: 25px;
       margin: 10px;
@@ -233,15 +300,103 @@ body{
       font-family: 'Shadows Into Light Two', cursive;
       background-color: #ffffff;
     }
-  
-  
+    .boxProject{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+      border-radius: 25px;
+      background-color: rgb(231, 229, 227);
+      padding: 15px;
+      width: 320px;
+      margin: 10px;
+    }
+    .container-card > h2{
+      font-size: 1.5rem;
+      margin-top: 0%;
+    }
+    .moodboardCategory > div:first-child{
+      border-radius: 50px;
+      margin: 2rem;
+      background-color: #ffffff;
+      width: 100%;
+      text-align: center;
+    }
+    .moodboardDescription{
+      width: 100%;
+      text-align: center;
+    }
+    .moodboardDescription{
+    display: flex;
+    flex-direction: row;
+    align-items:flex-start;
+    flex-wrap: wrap;
+    justify-content: center;
+    }
+    .boxDescription{
+      border-radius: 25px;
+        width: 30rem;
+        margin: 10px;
+        background-color: #ffffff;
+        padding: 20px;
+        text-align: center;
+    }
+
+      /*FOOTER*/
+    #containerFooter{
+      background-color: rgb(196, 190, 190);
+      padding: 2%;
+      border-radius: 50px 50px 0 0 ;
+      filter: drop-shadow(0 0 0.75rem rgba(83, 83, 83, 0.26));
+      margin-left: 3%;
+      margin-right: 3%;
+      margin-top: 3%;
+      padding-bottom: 0.3%;
+      padding-top: 0.7%;
+      width: auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .visualDescription{
+    border-radius: 25px;
+    width: 30rem;
+    margin: 10px;
+    margin-top: 0%;
+    margin-left: 0%;
+    filter: drop-shadow(0 0 0.75rem rgba(83, 83, 83, 0.26));
+    }
+    .titleSection{
+      border-radius: 50px;
+      margin: 2rem;
+      background-color: #ffffff;
+      width: 100%;
+      text-align: center;
+      font-family: 'Shadows Into Light Two', cursive;
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+      margin-left: 3%;
+      margin-right: 3%;
+    }
+    .buttonsBox{
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+    }
+/*TAG PAGE*/
 
 
-  
+
+
 /*A VERIFIER*/
 
 /*
-  
+  .boxWelcome{
+      display: flex;
+      flex-direction: row;
+      align-items:flex-start;
+      flex-wrap: wrap;
+    }
   
   .boxVisual{
       display: flex;
@@ -249,19 +404,8 @@ body{
       align-items:flex-start;
       flex-wrap: wrap;
     }
-  .boxProject{
-      border-radius: 25px;
-      background-color: rgb(231, 229, 227);
-      padding: 10px;
-      width: 320px;
-      margin: 10px;
-    }
-    .boxWelcome{
-      display: flex;
-      flex-direction: row;
-      align-items:flex-start;
-      flex-wrap: wrap;
-    }
+  
+    
     .welcomeText{
       border-radius: 25px;
       margin: 10px;
@@ -277,21 +421,7 @@ body{
     }
 */
 
-  /*FOOTER*/
-    #containerFooter{
-      background-color: rgb(196, 190, 190);
-      padding: 2%;
-      border-radius: 50px 50px 0 0 ;
-      filter: drop-shadow(0 0 0.75rem rgba(83, 83, 83, 0.26));
-      margin-left: 3%;
-      margin-right: 3%;
-      margin-top: 1%;
-      padding-bottom: 0.3%;
-      padding-top: 0.3%;
-      width: auto;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
+
+    
 
 

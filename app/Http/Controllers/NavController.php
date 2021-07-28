@@ -18,10 +18,15 @@ class NavController extends Controller
 
     public function showTag($id)
     {
+        //pour afficher les categories
         $categories = Category::all()->sortBy('name');
-        $projects = Project::with('tags')->get()->sortBy('id');
-        return view('tag', ['tag' => Tag::findOrFail($id),'projects' => $projects, 'categories' => $categories ]);
+        //pour afficher les projects a partir du tag choisi
+        $tag = Tag::with('projects')->findOrFail($id);
+
+        return view('tag', ['tag' => $tag, 'categories' => $categories ]);
     
+
+
         /* $categories = Category::all()->sortBy('name');
         $projects = Project::all();
         return view('tag', ['tag' => Tag::findOrFail($id),'projects' => $projects, 'categories' => $categories ]); */

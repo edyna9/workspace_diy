@@ -33,7 +33,7 @@
 
         <div class="moodboardUse">
             <div class="welcomeText">
-                <h1 class="specialText" id="textLight">YOUR CREATIVITY HAS NO LIMITS!</h1>
+                <h1 class="specialText" id="textLight">How it works?</h1>
             </div>
             <div class="boxWelcome">
                 <div class="boxShortText">
@@ -52,24 +52,26 @@
                     <h3 class="specialText">Share your Project</h3>
                 </div>
             </div>
+            <div class="welcomeText">
+                <h1 class="specialText">YOUR CREATIVITY HAS NO LIMITS!</h1>
+            </div>
         </div>
-        
-
-
-
             @foreach ($categories as $category)
             <div class="moodboardCategory">
                 <div>
-                    <h2 id="section{{$category->name}}" class="specialText">{{$category->name}}</h2>
+                    <h1 id="section{{$category->name}}" class="specialText">{{$category->name}}</h1>
                 </div>
-        <div class="boxVisual">
-            @foreach ($category->tags as $tag)
-                <div>
-                    <a href="/tag/{{ $tag->id }}" ><img class="visual" src="{{$tag->visual}}" alt="{{$tag->name}}"></a>
+
+                <div class="boxVisual">
+                    @foreach ($category->tags as $tag)
+                        <div class="container-card">
+                            <a href="/tag/{{ $tag->id }}"><img class="visual" src="{{$tag->visual}}" alt="{{$tag->name}}"></a>
+                            <h2>{{$tag->name}}</h2>
+                        </div>
+                    @endforeach
                 </div>
-            @endforeach
-        </div>
-    </div>
+
+            </div>
             @endforeach
     </div>
 @endsection

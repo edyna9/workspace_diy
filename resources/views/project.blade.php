@@ -6,24 +6,25 @@
     <div class="container">
         <div class="boxWelcome">
             <div>
-                <p>{{$project->tags}}</p>
+                <a href="{{$project->source}}"><img class="visualDescription" src="{{$project->visual}}" alt="{{$project->name}}"></a>
             </div>
-            <div>
-                <a href="{{$project->source}}"><img class="visual" src="{{$project->visual}}" alt="{{$project->name}}"></a>
-            </div>
-            <div class="boxText">
+            <div class="boxDescription">
                 <h1>{{$project->name}}</h1>
                     <p>{{$project->description}}</p>
-                <h3>Author : <a href="{{$project->source}}" target="_blank" rel="noopener noreferrer">{{$project->author}}</a></h3>
-                <div>
-                    <form action="/deleteProject" method="POST">
-                        @csrf
-                            <input type="hidden" name="id" value="{{$project->id}}">
-                            <input type="submit" value="X">
-                    </form>
-                </div>
-                <div>
-                    <a href="/updateProject/{{$project->id}}">Change it</a> 
+                <h3>Author : <a class="authorLink" href="{{$project->source}}" target="_blank" rel="noopener noreferrer">{{$project->author}}</a></h3>
+                <div class="buttonsBox">
+                    <div>
+                        <form action="/deleteProject" method="POST">
+                            @csrf   
+                                <input type="hidden" name="id" value="{{$project->id}}">
+                                <button type="submit"><i class="fas fa-trash-alt"></i></button>
+                                
+                        </form>
+                
+                    </div>
+                    <div>
+                        <a href="/updateProject/{{$project->id}}"><i class="fas fa-edit"></i></a> 
+                    </div>
                 </div>
             </div>
             
