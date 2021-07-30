@@ -11,7 +11,8 @@
             <div class="boxDescription">
                 <h1>{{$project->name}}</h1>
                     <p>{{$project->description}}</p>
-                <h3>Author : <a class="authorLink" href="{{$project->source}}" target="_blank" rel="noopener noreferrer">{{$project->author}}</a></h3>
+                        <h3>Watch more of this project with: </h3>
+                            <a class="authorLink" href="{{$project->source}}" target="_blank" rel="noopener noreferrer">{{$project->author}}</a>
                 <div class="buttonsBox">
                     <div>
                         <form action="/deleteProject" method="POST">

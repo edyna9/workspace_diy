@@ -10,7 +10,7 @@
                 <li><a class="boxText" id="boxViolet" href="/home/#sectionColor">COLOR</a></li>
                 <li><a class="boxText" id="boxBlue" href="/home/#sectionMaterial">MATERIAL</a></li>
                 <li><a class="boxText" id="boxTurquoise" href="/add_project">CREATE DIY</a></li>
-                <li><a class="boxText" id="boxGreen" href="/listProjects">DIY PROJECTS</a></li>
+                <li><a class="boxText" id="boxGreen" href="/listProjects">PROJECTS</a></li>
                 <li><a class="boxText" id="boxLightGreen" href="/add_tag">CREATE TAG</a></li>    
             </ul>
         </nav>

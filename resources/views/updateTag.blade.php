@@ -4,8 +4,13 @@
 
 @section('content')
     <div class="container">
-        <h1>Change this TAG</h1>
+        <div class=formBoard>
             <div>
+                <img class="visualForm"src="/images/inspiration-tag.jpeg" alt="brushes">
+            </div>
+        
+            <div>
+                <h1>Change this TAG</h1>
                 <form action="/updateTag" method="POST">
                     @csrf
                         <div>
@@ -17,6 +22,7 @@
                                 @endforeach
                             </select>
                         </div>
+                        <br>
                     <input type="hidden" name="id" value="{{$tag->id}}"> 
                         <div>
                             <label for="name">Name</label>
@@ -24,13 +30,15 @@
                                     <input type="text" name="name" placeholder="Name" value="{{$tag->name}}">
                                 </div>
                         </div>
+                        <br>
                         <div>
-                            <label for="visual">Visual</label>
-                                <p>Add the image adress Exemple of type: https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_92x30dp.png</p>
+                            <label for="visual">Visual (Image adress)</label>
+                                
                                     <div>
                                         <input type="text" name="visual" placeholder="Visual" value="{{$tag->visual}}">
                                     </div>
                         </div>
+                        <br>
                         <div>
                             <label for="description">Description</label>
                             <div>
@@ -38,11 +46,12 @@
                             </div>
                         </div>
                     <br>
-                        <div>
-                            <button type="submit">Chage this Tag !</button>
+                        <div class="buttonsBox">
+                            <button class="buttonCreate"  type="submit">Chage this Tag !</button>
                         </div>
                 </form>
             </div>
+        </div>
     </div>
 @endsection
 

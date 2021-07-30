@@ -26,14 +26,13 @@
                     <h2>We work hardly to choose the best DIY Projects for you</h2>
                         <p>When you make items yourself, you can choose projects that suit your tastes, create them in your choice of colours/textures, and then use them to your heart’s content. Whether you’re aiming for efficiency, decoration, fun, or self-sufficiency, there’s a grat selection of awesome DIY projects just waiting for you. Pick a few that you might like to try out!</p>
                 </div>
-        </div>
-        
+            </div>
         </div>
         
 
         <div class="moodboardUse">
             <div class="welcomeText">
-                <h1 class="specialText" id="textLight">How it works?</h1>
+                <h1 class="whiteBorder" id="textLight">HOW IT WORKS?</h1>
             </div>
             <div class="boxWelcome">
                 <div class="boxShortText">
@@ -53,25 +52,26 @@
                 </div>
             </div>
             <div class="welcomeText">
-                <h1 class="specialText">YOUR CREATIVITY HAS NO LIMITS!</h1>
+                <h1 class="whiteBorder">YOUR CREATIVITY HAS NO LIMITS!</h1>
             </div>
         </div>
+
             @foreach ($categories as $category)
-            <div class="moodboardCategory">
-                <div>
-                    <h1 id="section{{$category->name}}" class="specialText">{{$category->name}}</h1>
-                </div>
+                <div class="moodboardCategory">
+                    <div>
+                        <h1 id="section{{$category->name}}" class="specialScriptText">{{$category->name}}</h1>
+                    </div>
 
-                <div class="boxVisual">
-                    @foreach ($category->tags as $tag)
-                        <div class="container-card">
-                            <a href="/tag/{{ $tag->id }}"><img class="visual" src="{{$tag->visual}}" alt="{{$tag->name}}"></a>
-                            <h2>{{$tag->name}}</h2>
-                        </div>
-                    @endforeach
-                </div>
+                    <div class="boxVisual">
+                        @foreach ($category->tags as $tag)
+                            <div class="container-card">
+                                <a href="/tag/{{ $tag->id }}"><img class="visual" src="{{$tag->visual}}" alt="{{$tag->name}}"></a>
+                                <h2>{{$tag->name}}</h2>
+                            </div>
+                        @endforeach
+                    </div>
 
-            </div>
+                </div>
             @endforeach
     </div>
 @endsection

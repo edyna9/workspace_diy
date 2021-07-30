@@ -1,8 +1,16 @@
 <div id="containerFooter">
-    <a href="/home"><h1 id='Title'>WorkSpace</h1></a>
-        <h2>Tell Us more about you To : </h2>
-            <a href="workspace@gmail.com"><i id="iconContact" class="fab fa-instagram-square"></i></a>
-            <br>
-                <p>Copyright Workspace 2021</p>
+
+    <div>
+        <a href="/home"><h1 id='Title'>WorkSpace</h1></a>
+    </div>
+    <div>
+        <a href="workspace@gmail.com"><i id="iconContact" class="fab fa-instagram-square"></i></a>
+            
+    </div>
+    
+ 
+<div>
+    <h5>Copyright Workspace 2021</h5>
+</div>
 </div>
 
