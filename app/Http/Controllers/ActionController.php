@@ -79,41 +79,6 @@ class ActionController extends Controller
         $tag->save();
         return redirect('/home');
     }
-/*
-    public function addTag(Request $request)
-    {
-        $tag= new Tag;
-        $tag->title = $request->title;
-        $tag->author_id = $request->author_id;
-        $tag->publisher_id = $request->publisher_id;
-        $tag->publication_year = $request->publication_year ;
-        $tag->synopsis = $request->synopsis;
-        $tag->save();
-        $tag->genres()->attach($request->genres);
-        return redirect('/list');
-    }
 
-    public function deleteTag(Request $request)
-    {
-        $tag = Tag::find($request->id);
-        $tag->genres()->detach();
-        $tag->delete();
-
-        //tag::destroy($request->id);
-        return redirect('/list');
-    }
-
-    public function updateTag(Request $request)
-    {
-        $tag = Tag::findOrFail($request->id);
-        $tag->title = $request->title;
-        $tag->author_id = $request->author_id;
-        $tag->publisher_id = $request->publisher_id;
-        $tag->publication_year = $request->publication_year ;
-        $tag->synopsis = $request->synopsis;
-        $tag->genres()->sync($request->genres);
-        $tag->save();
-        return redirect('/list'); 
-    }
-*/
+    
 }

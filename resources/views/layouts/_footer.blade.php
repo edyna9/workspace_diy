@@ -4,7 +4,7 @@
         <a href="/home"><h1 id='Title'>WorkSpace</h1></a>
     </div>
     <div>
-        <a href="workspace@gmail.com"><i id="iconContact" class="fab fa-instagram-square"></i></a>
+        <a href="https://www.instagram.com/workspace/"><i id="iconContact" class="fab fa-instagram-square"></i></a>
             
     </div>
     

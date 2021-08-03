@@ -55,3 +55,4 @@ Route::post('/addTag', [ActionController::class, 'addTag']);
 Route::get('/updateTag/{id}', [NavController::class, 'showUpdateTag']);
 
 Route::post('/updateTag', [ActionController::class, 'updateTag']);
+

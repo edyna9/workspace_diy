@@ -64,10 +64,14 @@
 
                     <div class="boxVisual">
                         @foreach ($category->tags as $tag)
-                            <div class="container-card">
+                        <div class="boxTag">
+                            <a href="/tag/{{ $tag->id }}"><img class="visual" src="{{$tag->visual}}" alt="{{$tag->name}}"></a>
+                            <h2>{{$tag->name}}</h2>
+                        </div> 
+                            {{-- <div class="boxTag">
                                 <a href="/tag/{{ $tag->id }}"><img class="visual" src="{{$tag->visual}}" alt="{{$tag->name}}"></a>
                                 <h2>{{$tag->name}}</h2>
-                            </div>
+                            </div> --}}
                         @endforeach
                     </div>
 
